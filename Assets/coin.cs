@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class coin : MonoBehaviour
 {
-	public float speed
+	public float speed;
 
     void FixedUpdate()
     {
-    transform.Rotate(new Vector3(0,speed,0))
+    transform.Rotate(new Vector3(0,speed,0));
     }
 }
