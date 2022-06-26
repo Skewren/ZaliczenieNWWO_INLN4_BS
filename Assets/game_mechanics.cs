@@ -31,9 +31,7 @@ public class game_mechanics : MonoBehaviour
             Destroy(GetComponent<Rigidbody>());
             Destroy(GetComponent<Collider>());
             Destroy(GetComponent<Renderer>());
-            
-        }
-	if (Input.GetButtonDown("Jump"))
+		if (Input.GetButtonDown("Jump"))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
