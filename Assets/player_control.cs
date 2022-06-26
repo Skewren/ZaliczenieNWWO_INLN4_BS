@@ -7,7 +7,7 @@ public class player_control : MonoBehaviour
 {
     public float speed;
     public float jumpForce;
-    private Rigidbody rv;
+    private Rigidbody rb;
     private bool onGround = false;
     public int direction = 1;
     public GameObject ammo;
@@ -26,7 +26,7 @@ public class player_control : MonoBehaviour
     void Update()
     {
         RaycastHit ground;
-        for (float i = -0.45f; i <= 0.55f; i = i + 0.45f)
+        for (float i = -0.45f; i <= 0.45f; i = i + 0.45f)
         {
             Vector3 pozycja = new Vector3(i, 0, 0) + transform.position;
             Debug.DrawRay(pozycja, -Vector3.up, Color.red, 0.1f);
@@ -36,14 +36,14 @@ public class player_control : MonoBehaviour
                 {
                     Destroy(ground.collider.gameObject);
                     Jump();
-                    break
+                    break;
                 }
                 onGround = true;
                 break;
             }
             else
             {
-                onGround = true;
+                onGround = false;
             }
         }
 
