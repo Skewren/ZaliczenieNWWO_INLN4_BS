@@ -33,6 +33,10 @@ public class game_mechanics : MonoBehaviour
             Destroy(GetComponent<Renderer>());
             
         }
+	if (Input.GetButtonDown("Jump"))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
 
         if (transform.position.y < threshold)
         {
