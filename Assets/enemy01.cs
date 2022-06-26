@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemy01 : MonoBehaviour
 {
 	public float speed;
-	private int direction=1;
+	private int direction=-1;
 	private Rigidbody rb;
 	
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class enemy01 : MonoBehaviour
 		{
 		if (wall.collider.tag!="Player")
 			{
-			direction--direction;	
+			direction=-direction;	
 			}
 		}
 	
@@ -33,9 +33,9 @@ public class enemy01 : MonoBehaviour
 	
 	void OnCollisionEnter(Collision hit)
 	{
-	if (hit.gameObject.compareTag("Player"))
+	if (hit.gameObject.CompareTag("Player"))
 		{
-		hit.gameObject.GetComponent<gamemechanics>().Dead=true;
+		hit.gameObject.GetComponent<game_mechanics>().Dead=true;
 		}	
 	}
 	
