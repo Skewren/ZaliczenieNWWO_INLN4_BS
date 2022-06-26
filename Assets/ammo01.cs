@@ -29,7 +29,7 @@ public class ammo01 : MonoBehaviour
 	
 	void OnCollisionEnter(Collision hit)
 	{
-	if (hit.gameObject.CompareTag("player"))
+	if (hit.gameObject.CompareTag("enemy"))
 		{
 		Destroy(hit.gameObject);	
 		}
