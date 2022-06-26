@@ -1,3 +1,7 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class movingplatform : MonoBehaviour
 {
     private Vector3 posA;
